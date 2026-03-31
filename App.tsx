@@ -13,6 +13,7 @@ import ForgotPasswordPage from './components/admin/ForgotPasswordPage';
 import ProfilesList from './components/ProfilesList';
 import TestSupabaseConnection from './components/TestSupabaseConnection';
 import Footer from './components/Footer';
+import VideoBanner from './components/VideoBanner';
 import ClientLoginPage from './components/client/ClientLoginPage';
 import ClientBookingsPage from './components/client/ClientBookingsPage';
 
@@ -176,6 +177,9 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans flex flex-col">
       <Header />
+      <Routes>
+        <Route path="/" element={<VideoBanner />} />
+      </Routes>
       <main className="container mx-auto p-4 md:p-8 flex-grow">
         <Routes>
           <Route 

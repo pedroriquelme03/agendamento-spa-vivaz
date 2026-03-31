@@ -1,6 +1,6 @@
 import React from 'react';
 import { AdminView } from './Admin';
-import { CalendarDaysIcon, ScissorsIcon, UserIcon, CalendarIcon, UserCogIcon } from '../icons';
+import { CalendarDaysIcon, ScissorsIcon, UserIcon, CalendarIcon, UserCogIcon, PhotoVideoIcon } from '../icons';
 import { useAuth } from '../../contexts/AuthContext';
 
 interface SidebarProps {
@@ -72,6 +72,12 @@ const Sidebar: React.FC<SidebarProps> = ({ activeView, setActiveView }) => {
           icon={<UserCogIcon className="w-6 h-6" />}
           isActive={activeView === 'admins'}
           onClick={() => setActiveView('admins')}
+        />
+        <NavItem
+          label="Banner"
+          icon={<PhotoVideoIcon className="w-6 h-6" />}
+          isActive={activeView === 'banner'}
+          onClick={() => setActiveView('banner')}
         />
       </nav>
       <div className="mt-4 pt-4 border-t border-gray-300">
